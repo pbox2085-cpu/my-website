@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --color-magic-blue: #72CBE8;
+  --color-magic-blue-light: #E8F7FC;
+  --color-magic-lime: #B7D92B;
+  --color-magic-lime-light: #F4FADC;
+  --color-magic-green: #8EAE19;
+  --color-cream: #FFFDF5;
+  --color-ivory: #FFF8EA;
+  --color-pink-soft: #FDF0F3;
+  --color-pink-cupcake: #F28B9D;
+  --color-pink-berry: #E85E76;
+  --color-chocolate: #38261F;
+  --color-gold: #F6D86B;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: #38261F;
+    background-color: #FFFDF5;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom whimsical animations & decorative details */
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(3deg);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 0.9;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-slow 6s ease-in-out 2s infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+/* Scalloped decorative border edge pattern */
+.scallop-border-bottom {
+  background-image: radial-gradient(circle at 10px 0, transparent 0, transparent 10px, #FFFDF5 10px);
+  background-size: 20px 20px;
+  background-repeat: repeat-x;
+}

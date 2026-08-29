@@ -1,0 +1,7 @@
+{
+  "name": "Magical Bites",
+  "description": "Handcrafted cakes, cupcakes, and delightful desserts made to bring a little extra magic to every celebration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
